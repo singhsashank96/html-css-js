@@ -103,7 +103,7 @@
 .ticket-header {
 	display: flex;
 	align-items: center;
-	justify-content: start;
+	justify-content: space-between;
 	gap: 10px;
 }
 
@@ -124,7 +124,8 @@
 }
 
 .price {
-	margin-left: 34rem;
+	/* margin-left: 34rem; */
+	margin-right: 30px;
 	margin-top: .2rem;
 }
 
@@ -132,14 +133,15 @@
 	padding: 5px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+	margin-left: 30px;
 }
 
-select {
+/* select {
 	position: absolute;
 	margin-left: 47rem;
 	border: 1px solid #767676;
 	background: #EFEFEF;
-}
+} */
 
 .silver {
 	padding-top: 25px;
@@ -169,19 +171,19 @@ select {
 }
 
 .diamond p {
-	width: 19rem;
+	/* width: 19rem; */
 }
 
 .fanpit .price {
-	margin-left: 33.3rem;
+	/* margin-left: 33.3rem; */
 }
 
 .gold1 .price {
-	margin-left: 15.5rem;
+	/* margin-left: 15.5rem; */
 }
 
 .diamond .price {
-	margin-left: 19.7rem;
+	/* margin-left: 19.7rem; */
 }
 
 .total span {
@@ -189,8 +191,8 @@ select {
 	font-family: Inter;
 	font-size: 20px;
 	font-weight: 600;
-	position: absolute;
-	margin-top: 1rem;
+	/* position: absolute; */
+	/* margin-top: 1rem; */
 }
 
 .final-price {
@@ -258,3 +260,14 @@ select {
 	margin: 0; 
   }
   
+
+
+.checkOut_conitainer{
+	margin: auto;
+	width: 60%;
+
+}
+
+.total{
+	margin-top: 20px;
+}

@@ -64,8 +64,8 @@
                 </div>
                 <div class="cont-total">
                     <h2 id="cont-total-text" class="cont-total_text">Subtotal</h2>
-                    <h2 id="cont-total_rs-text" class="cont-total_rs">Rs.85000 </h2>
-                </div>
+                    <h2 id="final-price_rs_final" class="final-price_rs">Rs <span id="totalAmount1"></span></h2>
+                                    </div>
                 <div class="final-service1">
                     <h2 id="final-service1-text-one" class="final-service1_text"></h2>
                     <h2 id="final-service1_rs-two" class="final-service1_rs"></h2>
@@ -75,10 +75,36 @@
                 </div>
                 <div class="final-price">
                     <h1 id="final-price_final" class="final-price_text">Total</h1>
-                    <h1 id="final-price_rs_final" class="final-price_rs">Rs 85000.00</h1>
+                    <h1 id="final-price_rs_final" class="final-price_rs">Rs <span id="totalAmount2"></span></h1>
                 </div>
         </section>
     </section>
+    <script>
+        // Function to parse URL query parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    
+        // Get the total amount from the URL
+        const totalAmount = getUrlParameter('total');
+    
+        // Display the total amount on the page
+        const totalAmountElement1 = document.getElementById('totalAmount1');
+        const totalAmountElement2 = document.getElementById('totalAmount2');
+        if (totalAmount) {
+            totalAmountElement1.textContent = totalAmount;
+            totalAmountElement2.textContent = totalAmount; // Set both elements with the total amount
+        } else {
+            totalAmountElement1.textContent = 'Total Amount not found';
+            totalAmountElement2.textContent = 'Total Amount not found';
+        }
+    </script>
+    
     
 </body>
 
